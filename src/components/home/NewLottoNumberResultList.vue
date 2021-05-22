@@ -26,7 +26,7 @@ export default {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 30px 0;
+  margin: 20px 0;
   .round {
     font-size: 0.75rem;
     span {

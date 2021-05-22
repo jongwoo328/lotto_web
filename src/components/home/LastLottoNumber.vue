@@ -5,9 +5,9 @@
         <h2>{{ lottoData.round }}회</h2>
         <span v-text="lottoData.date"></span>
       </div>
-      <div class="refresh" @click="refreshLastLotto()">
+      <!-- <div class="refresh" @click="refreshLastLotto()">
         <LastLottoNumberRefreshIcon :refreshing="refreshing" />
-      </div>
+      </div> -->
     </div>
     <hr />
     <LastLottoNumberList :lottoData="lottoData" />
@@ -17,7 +17,7 @@
 <script>
 import { getLastLotto } from "@/api";
 import LastLottoNumberList from "./LastLottoNumberList";
-import LastLottoNumberRefreshIcon from "./LastLottoNumberRefreshIcon";
+// import LastLottoNumberRefreshIcon from "./LastLottoNumberRefreshIcon";
 
 export default {
   name: "LastLottoNumber",
@@ -53,7 +53,10 @@ export default {
   async mounted() {
     await this.refreshLastLotto();
   },
-  components: { LastLottoNumberList, LastLottoNumberRefreshIcon },
+  components: {
+    LastLottoNumberList,
+    //  LastLottoNumberRefreshIcon
+  },
 };
 </script>
 

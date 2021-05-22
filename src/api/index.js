@@ -1,7 +1,11 @@
 const axios = require("axios");
 
-const baseUrl = "https://lotto.jongwoo.me/api/v1/lottos/last";
+const baseURL = "https://lotto.jongwoo.me/api/v1";
 
 exports.getLastLotto = async () => {
-  return axios.get(baseUrl);
+  return axios.get(`${baseURL}/lottos/last`);
+};
+
+exports.getNewNumber = async (params) => {
+  return axios.get(`${baseURL}/lottos/new`, { params });
 };
